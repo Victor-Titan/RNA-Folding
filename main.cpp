@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+int OPT[100][100];
+int l;
+string s;
 bool isCompatible(char a, char b)
 {
     if ((a == 'A' && b == 'U') || (a == 'U' && b == 'A') || (a == 'C' && b == 'G') || (a == 'G' && b == 'C'))
@@ -8,15 +10,84 @@ bool isCompatible(char a, char b)
     else
         return 0;
 }
+struct Print{
+    char a;
+    char b;
+    int a1 ;
+    int b1 ;
+};
+Print printvalues[100];
+
+int check_exists(int i){
+    for(int k = 0 ; k < l ; k++){
+        if(i == printvalues[k].a1 || i == printvalues[k].b1)return 1;
+    }
+    return 0;
+}
+
+void traceback(int i, int j){
+    
+    if( j <= i) return ;
+   
+    if (OPT[i][j] == OPT[i][j-1]) // if the basis in j is unpaired
+    {
+        
+        
+        traceback(i, j-1) ;
+    }
+    else{
+        // if j forms a pair with index towards the left
+        
+        for(int k = i ; k < j - 4 ; k++){
+            
+            int check = isCompatible(s[k-1], s[j-1]) ;
+            if( check == 1){ 
+                
+                if(k-1 <0){
+                    if(OPT[i][j] == OPT[k+1][j-1] +1){
+                        int checkK = check_exists(k) ;
+                        int checkJ = check_exists(j) ;
+                        if(checkK == 0 && checkJ == 0){
+                            printvalues[l].a = s[k-1] ;
+                            printvalues[l].a1 = k ;
+                            printvalues[l].b = s[j-1] ;
+                            printvalues[l].b1 = j ;
+                            l++ ;
+                            
+                        }
+                        traceback(k+1, j-1) ;
+                        
+                    }
+                }
+                else if(OPT[i][j] == OPT[i][k-1] + OPT[k+1][j-1] +1){
+                    int checkK = check_exists(k) ;
+                    int checkJ = check_exists(j) ;
+                    if(checkK == 0 && checkJ == 0){
+                        printvalues[l].a = s[k-1] ;
+                        printvalues[l].a1 = k ;
+                        printvalues[l].b = s[j-1] ;
+                        printvalues[l].b1 = j ;
+                        l++;  
+                        
+                    }
+                    traceback(i, k-1) ;
+                    traceback(k+1 , j-1) ;
+                    
+                }
+            }
+            
+        }
+    }
+
+}
+
 // ACAUGAUGGCCAUGU
 int main()
 {
     cout << "Enter the RNA subsequence: ";
-    string s;
     cin >> s;
     int n = s.length();
-    int OPT[n + 1][n + 1];
-
+    l=0;
     memset(OPT, 0, sizeof(OPT));
 
     vector<pair<int, int>> rna_pairs[n + 1][n + 1];
@@ -73,6 +144,12 @@ int main()
         cout << endl;
     }
 
+    traceback(1,n);
     for (auto it : rna_pairs[1][n])
         cout << "(" << it.first << " " << it.second << "), ";
+    cout << endl;
+    for(int  a = 0 ; a < l ; a++){
+        cout<<"(" << printvalues[a].a << " , " << printvalues[a].b << ") at indices " << printvalues[a].a1 << " " << printvalues[a].b1 << endl;
+    }
 }
+
