@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./global.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 min-h-screen">
+    <div class="nav-bar flex items-center">
+        <span class="m-4 mr-auto text-2xl font-bold"> DAA Assignment 2</span>
+        <a class="mr-auto nav-item" href="./index.html"> Overview </a>
+        <a class="nav-item" href="./time_analysis.html"> Time Analysis </a>
+        <a class="nav-item font-semibold" href="./testcases.html"> Test Cases </a>
+        <a class="nav-item" href="./team.html"> Team Members </a>
+    </div>
+    <div class="grid grid-cols-home-sm sm:grid-cols-home-md md:grid-cols-home-lg">
+        <div class=""></div>
+
+        <div class="white-card flex flex-col">
+            <h1 class="title self-center"> Test Cases </h1>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 1</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> RNA KINK-TURN MOTIF</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        GGCGAAGAACCGGGGAGCC</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 4</p> 
+                        <p> 0-18 (G-C)</p> 
+                        <p> 1-17 (G-C)</p> 
+                        <p> 2-11 (C-G)</p> 
+                        <p> 3-9 (G-C)</p>
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 2</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> CRYSTAL STRUCTURE OF RNA DUPLEX</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        UCGUGCGA</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 2</p> 
+                        <p> 0-7 (U-A)</p> 
+                        <p> 1-6 (C-G)</p> 
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 3</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> EUKARYOTIC DECODING SITE IN COMPLEX WITH AG(I)</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        UUGCGUCGCGUCGACGAAGUCGC</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 6</p> 
+                        <p> 0-17 (U-A)</p> 
+                        <p> 1-16 (U-A)</p> 
+                        <p> 3-15 (C-G)</p> 
+                        <p> 4-14 (G-C)</p> 
+                        <p> 5-13 (U-A)</p> 
+                        <p> 6-12 (C-G)</p> </p>
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 4</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> SOLUTION STRUCTURE OF NPSL2</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        GGGUGUAGAAAAGUAAGGGAAACUCAAACCCCUUUCUACACCC</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 15 </p>
+                        <p> 0-42 (G-C)</p> 
+                        <p> 1-41 (G-C)</p> 
+                        <p> 2-40 (G-C)</p> 
+                        <p> 3-39 (U-A)</p> 
+                        <p> 4-38 (G-C)</p> 
+                        <p> 5-37 (U-A)</p> 
+                        <p> 6-36 (A-U)</p> 
+                        <p> 7-35 (G-C)</p> 
+                        <p> 8-34 (A-U)</p> 
+                        <p> 9-33 (A-U)</p> 
+                        <p> 10-32 (A-U)</p> 
+                        <p> 12-28 (G-C)</p> 
+                        <p> 13-25 (U-A)</p> 
+                        <p> 14-23 (A-U)</p> 
+                        <p> 16-22 (G-C)</p>
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 5</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> CRYSTAL STRUCTURE OF E. COLI VALINE TRNA</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        GGGUGAUUAGCUCAGCUGGGAGAGCACCUCCCUUACAAGGAGGGGGUCGGCGGUUCGAUCCCGUCAUCACCCACCA</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 26 </p>
+                        <p> 0-74 (G-C)</p> 
+                        <p> 1-73 (G-C)</p> 
+                        <p> 2-15 (G-C)</p> 
+                        <p> 3-13 (U-A)</p> 
+                        <p> 4-12 (G-C)</p> 
+                        <p> 5-11 (A-U)</p> 
+                        <p> 16-72 (U-A)</p> 
+                        <p> 17-70 (G-C)</p> 
+                        <p> 18-69 (G-C)</p> 
+                        <p> 19-67 (G-C)</p> 
+                        <p> 20-66 (A-U)</p> 
+                        <p> 21-64 (G-C)</p> 
+                        <p> 22-63 (A-U)</p> 
+                        <p> 23-61 (G-C)</p> 
+                        <p> 24-43 (C-G)</p> 
+                        <p> 26-42 (C-G)</p> 
+                        <p> 27-41 (C-G)</p> 
+                        <p> 28-40 (U-A)</p> 
+                        <p> 29-39 (C-G)</p> 
+                        <p> 30-38 (C-G)</p> 
+                        <p> 32-37 (U-A)</p> 
+                        <p> 44-60 (G-C)</p> 
+                        <p> 45-59 (G-C)</p> 
+                        <p> 46-57 (U-A)</p> 
+                        <p> 47-56 (C-G)</p> 
+                        <p> 48-55 (G-C)</p>
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 6</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> DENV1 5'UTR STEM3</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        GGCCGACAAGAACAGUUUCGAAUCGGCC</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 10 </p>
+                        <p> 0-27 (G-C)</p> 
+                        <p> 1-26 (G-C)</p> 
+                        <p> 2-25 (C-G)</p> 
+                        <p> 3-24 (C-G)</p> 
+                        <p> 4-23 (G-C)</p> 
+                        <p> 5-22 (A-U)</p> 
+                        <p> 6-19 (C-G)</p> 
+                        <p> 7-17 (A-U)</p> 
+                        <p> 8-16 (A-U)</p> 
+                        <p> 10-15 (A-U)</p>
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 7</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> CRYSTAL STRUCTURE OF AN E. COLI THIM RIBOSWITCH BOUND TO THIAMINE, MANGANESE IONS</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        GCGACUCGGGGUGCCCUUCUGCGUGAAGGCUGAGAAAUACCCGUAUCACCUGAUCUGGAUAAUGCCAGCGUAGGGAAGUCGCA</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 28 </p>
+                        <p> 0-81 (G-C)</p> 
+                        <p> 1-80 (C-G)</p> 
+                        <p> 2-79 (G-C)</p> 
+                        <p> 3-78 (A-U)</p> 
+                        <p> 4-77 (C-G)</p> 
+                        <p> 5-75 (U-A)</p> 
+                        <p> 6-73 (C-G)</p> 
+                        <p> 7-14 (G-C)</p> 
+                        <p> 8-13 (G-C)</p> 
+                        <p> 15-72 (C-G)</p> 
+                        <p> 16-71 (U-A)</p> 
+                        <p> 18-69 (C-G)</p> 
+                        <p> 20-68 (G-C)</p> 
+                        <p> 21-67 (C-G)</p> 
+                        <p> 23-66 (U-A)</p> 
+                        <p> 24-65 (G-C)</p> 
+                        <p> 27-64 (G-C)</p> 
+                        <p> 29-63 (C-G)</p> 
+                        <p> 30-35 (U-A)</p> 
+                        <p> 36-62 (A-U)</p> 
+                        <p> 37-60 (U-A)</p> 
+                        <p> 38-59 (A-U)</p> 
+                        <p> 39-57 (C-G)</p> 
+                        <p> 40-56 (C-G)</p> 
+                        <p> 42-54 (G-C)</p> 
+                        <p> 44-53 (A-U)</p> 
+                        <p> 45-52 (U-A)</p> 
+                        <p> 46-51 (C-G)</p>
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 8</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> CHILI RNA APTAMER IN COMPLEX WITH DMHBO+</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        GGCUAGCUGGAGGGGCGCCAGUUCGCUGGUGGUUGGGUGCGGUCGGCUAGCC</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 16 </p>
+                        <p> 0-51 (G-C)</p> 
+                        <p> 1-50 (G-C)</p> 
+                        <p> 2-49 (C-G)</p> 
+                        <p> 3-48 (U-A)</p> 
+                        <p> 4-47 (A-U)</p> 
+                        <p> 5-46 (G-C)</p> 
+                        <p> 6-44 (C-G)</p> 
+                        <p> 8-43 (G-C)</p> 
+                        <p> 9-39 (G-C)</p> 
+                        <p> 10-37 (A-U)</p> 
+                        <p> 15-36 (C-G)</p> 
+                        <p> 17-35 (C-G)</p> 
+                        <p> 18-34 (C-G)</p> 
+                        <p> 19-32 (A-U)</p> 
+                        <p> 23-31 (C-G)</p> 
+                        <p> 25-30 (C-G)</p>
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 9</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> MOSQUITO-BORNE FLAVIVIRUS DUMBBELL RNA</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        GGGGGCCAGAUGUCAUGUCUCUCAAGCCUAGGAGACACUAGACACUCUGGACUAUCGGUUAGAGGAAACCCCCCCAAAAAUGUAUAGGCU</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 31 </p>
+                        <p> 0-72 (G-C)</p> 
+                        <p> 1-71 (G-C)</p> 
+                        <p> 2-70 (G-C)</p> 
+                        <p> 3-55 (G-C)</p> 
+                        <p> 4-51 (G-C)</p> 
+                        <p> 5-49 (C-G)</p> 
+                        <p> 6-48 (C-G)</p> 
+                        <p> 7-47 (A-U)</p> 
+                        <p> 8-46 (G-C)</p> 
+                        <p> 9-45 (A-U)</p> 
+                        <p> 10-43 (U-A)</p> 
+                        <p> 11-42 (G-C)</p> 
+                        <p> 12-41 (U-A)</p> 
+                        <p> 13-40 (C-G)</p> 
+                        <p> 14-38 (A-U)</p> 
+                        <p> 15-36 (U-A)</p> 
+                        <p> 16-35 (G-C)</p> 
+                        <p> 17-34 (U-A)</p> 
+                        <p> 18-33 (C-G)</p> 
+                        <p> 19-32 (U-A)</p> 
+                        <p> 20-30 (C-G)</p> 
+                        <p> 21-29 (U-A)</p> 
+                        <p> 23-28 (A-U)</p> 
+                        <p> 56-69 (G-C)</p> 
+                        <p> 57-68 (G-C)</p> 
+                        <p> 58-66 (U-A)</p> 
+                        <p> 59-65 (U-A)</p> 
+                        <p> 73-87 (C-G)</p> 
+                        <p> 74-86 (C-G)</p> 
+                        <p> 75-84 (A-U)</p> 
+                        <p> 76-82 (A-U)</p>
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+
+            <div class="gray-card" >
+                <p class="mb-4 text-lg font-bold">Test Case: 10</p>
+                <p class="mb-2" ><span class="font-semibold">Molecule Name:</span> PSEUDORABIES VIRUS</p>
+                <div class="m-2 p-2 rounded shadow bg-gray-800 text-gray-200" >
+                    <p class="mt-2"><span class="font-semibold block">Input:</span>
+                        GGCUCGGCGGCGGA</p>
+                    
+                    <p class="mt-2"><span class="font-semibold block">Output:</span>
+                        <p> Predicted pairings: 3</p> 
+                        <p> 2-12 (C-G)</p> 
+                        <p> 4-11 (C-G)</p> 
+                        <p> 5-10 (G-C)</p>
+                    </p>
+                    <p class="mt-2"><span class="font-semibold block">Time:</span> 0.000105 s</p>
+                </div>
+            </div>
+      
+        </div>
+
+        <div class=""></div>
+    </div>
+</body>
+</html>

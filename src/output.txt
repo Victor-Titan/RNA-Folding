@@ -1,0 +1,22 @@
+For sequence: ACAUGAUGGCCAUGU
+Maximum no of pairs: 5
+Pairs: 
+(A,U) at indices 1 15
+(C,G) at indices 2 14
+(A,U) at indices 3 13
+(U,A) at indices 4 12
+(G,C) at indices 5 10
+
+For sequence: UCUCUGGUUAGGAAACUAACUAGGGA
+Maximum no of pairs: 9
+Pairs: 
+(A,U) at indices 1 15
+(C,G) at indices 2 14
+(A,U) at indices 3 13
+(U,A) at indices 4 12
+(G,C) at indices 5 10
+(G,C) at indices 6 20
+(U,A) at indices 8 19
+(U,A) at indices 9 18
+(G,C) at indices 11 16
+

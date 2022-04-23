@@ -1,0 +1,130 @@
+\hypertarget{class_r_n_a__folding}{}\doxysection{R\+N\+A\+\_\+folding Class Reference}
+\label{class_r_n_a__folding}\index{RNA\_folding@{RNA\_folding}}
+
+
+Main class with functions that run the algorithm.  
+
+
+
+
+{\ttfamily \#include $<$R\+N\+A\+\_\+folding.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_n_a__folding_afdfe0e66bd048d0641c5fe58f7b095d3}{R\+N\+A\+\_\+folding}} (string seq)
+\begin{DoxyCompactList}\small\item\em Construct a new R\+NA sequence object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_n_a__folding_a84774e41446eb1213d9c6a9b86efabf6}{get\+Max\+Pairs}} ()
+\begin{DoxyCompactList}\small\item\em Get the maximum number of base pairs that can be formed. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_n_a__folding_a9903952ffc33a1dce3be5967e3ad2a2c}{check\+\_\+exists}} (int i)
+\begin{DoxyCompactList}\small\item\em Check if base is already in a pair. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_n_a__folding_aa8898f324d79d9dfc2c91b50a9d6b60a}{traceback}} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Get the joined pairs of bases of in the R\+NA sequence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_n_a__folding_a544028c54dcaac905209638ced18a145}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em This function calculates the maximum possible pairs of the sequence based on the rules given The value is stored in O\+P\+T(1,n) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_n_a__folding_a06ca047742a58027ceba566a1ec8c2dc}\label{class_r_n_a__folding_a06ca047742a58027ceba566a1ec8c2dc}} 
+void \mbox{\hyperlink{class_r_n_a__folding_a06ca047742a58027ceba566a1ec8c2dc}{print\+Pairs}} ()
+\begin{DoxyCompactList}\small\item\em Print all the possible pairs of the sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_r_n_a__folding_aa7669cfa7f901bd3fbec9c0da5e3c8b0}\label{class_r_n_a__folding_aa7669cfa7f901bd3fbec9c0da5e3c8b0}} 
+int {\bfseries O\+PT} \mbox{[}1000\mbox{]}\mbox{[}1000\mbox{]}
+\item 
+\mbox{\Hypertarget{class_r_n_a__folding_aa4de73da5189cf724589d4e3e45477dd}\label{class_r_n_a__folding_aa4de73da5189cf724589d4e3e45477dd}} 
+int {\bfseries l}
+\item 
+\mbox{\Hypertarget{class_r_n_a__folding_afe46adaa53c5a3c0ded92670c411a0d7}\label{class_r_n_a__folding_afe46adaa53c5a3c0ded92670c411a0d7}} 
+int {\bfseries n}
+\item 
+\mbox{\Hypertarget{class_r_n_a__folding_ae1cbcc98149ea214e9ac172c4830d05a}\label{class_r_n_a__folding_ae1cbcc98149ea214e9ac172c4830d05a}} 
+string {\bfseries s}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main class with functions that run the algorithm. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_r_n_a__folding_afdfe0e66bd048d0641c5fe58f7b095d3}\label{class_r_n_a__folding_afdfe0e66bd048d0641c5fe58f7b095d3}} 
+\index{RNA\_folding@{RNA\_folding}!RNA\_folding@{RNA\_folding}}
+\index{RNA\_folding@{RNA\_folding}!RNA\_folding@{RNA\_folding}}
+\doxysubsubsection{\texorpdfstring{RNA\_folding()}{RNA\_folding()}}
+{\footnotesize\ttfamily R\+N\+A\+\_\+folding\+::\+R\+N\+A\+\_\+folding (\begin{DoxyParamCaption}\item[{string}]{seq }\end{DoxyParamCaption})}
+
+
+
+Construct a new R\+NA sequence object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The R\+NA sequence \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_n_a__folding_a9903952ffc33a1dce3be5967e3ad2a2c}\label{class_r_n_a__folding_a9903952ffc33a1dce3be5967e3ad2a2c}} 
+\index{RNA\_folding@{RNA\_folding}!check\_exists@{check\_exists}}
+\index{check\_exists@{check\_exists}!RNA\_folding@{RNA\_folding}}
+\doxysubsubsection{\texorpdfstring{check\_exists()}{check\_exists()}}
+{\footnotesize\ttfamily int R\+N\+A\+\_\+folding\+::check\+\_\+exists (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Check if base is already in a pair. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & index of the current base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 1 if already in a pair, else 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_n_a__folding_a544028c54dcaac905209638ced18a145}\label{class_r_n_a__folding_a544028c54dcaac905209638ced18a145}} 
+\index{RNA\_folding@{RNA\_folding}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!RNA\_folding@{RNA\_folding}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily void R\+N\+A\+\_\+folding\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calculates the maximum possible pairs of the sequence based on the rules given The value is stored in O\+P\+T(1,n) 
+
+\mbox{\Hypertarget{class_r_n_a__folding_a84774e41446eb1213d9c6a9b86efabf6}\label{class_r_n_a__folding_a84774e41446eb1213d9c6a9b86efabf6}} 
+\index{RNA\_folding@{RNA\_folding}!getMaxPairs@{getMaxPairs}}
+\index{getMaxPairs@{getMaxPairs}!RNA\_folding@{RNA\_folding}}
+\doxysubsubsection{\texorpdfstring{getMaxPairs()}{getMaxPairs()}}
+{\footnotesize\ttfamily int R\+N\+A\+\_\+folding\+::get\+Max\+Pairs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the maximum number of base pairs that can be formed. 
+
+\begin{DoxyReturn}{Returns}
+int The maximum number of base pairs for the R\+NA sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_n_a__folding_aa8898f324d79d9dfc2c91b50a9d6b60a}\label{class_r_n_a__folding_aa8898f324d79d9dfc2c91b50a9d6b60a}} 
+\index{RNA\_folding@{RNA\_folding}!traceback@{traceback}}
+\index{traceback@{traceback}!RNA\_folding@{RNA\_folding}}
+\doxysubsubsection{\texorpdfstring{traceback()}{traceback()}}
+{\footnotesize\ttfamily void R\+N\+A\+\_\+folding\+::traceback (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+Get the joined pairs of bases of in the R\+NA sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & start of the index under consideration \\
+\hline
+{\em j} & end of the index under consideration \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/R\+N\+A\+\_\+folding.\+h\item 
+src/R\+N\+A\+\_\+folding.\+cpp\end{DoxyCompactItemize}

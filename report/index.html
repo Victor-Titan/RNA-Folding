@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./global.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 min-h-screen">
+    <div class="nav-bar flex items-center">
+        <span class="m-4 mr-auto text-2xl font-bold"> DAA Assignment 2</span>
+        <a class="mr-auto nav-item font-semibold" href="./index.html"> Overview </a>
+        <a class="nav-item" href="./time_analysis.html"> Time Analysis </a>
+        <a class="nav-item" href="./testcases.html"> Test Cases </a>
+        <a class="nav-item" href="./team.html"> Team Members </a>
+    </div>
+    <div class="grid grid-cols-home-sm sm:grid-cols-home-md md:grid-cols-home-lg">
+        <div class=""></div>
+
+        <div class="white-card flex flex-col items-start">
+            <h1 class="title self-center"> RNA Secondary Sequence Prediction Algorithm </h1>
+
+            <div class="w-full">
+                <h2 class="m-4 text-3xl font-medium text-left">Problem Statement</h2>
+                <div class="gray-card flex flex-col">
+                    <span class="text-left font-bold">Problem :</span>
+                    <p class="test-justfy">
+                        <p class="m-2"> Given an RNA sequence <span class="font-bold">s</span>, predict it’s optimal secondary structure.</p>
+                        <span class="font-bold">Formulation :</span>
+                        <ul class="m-2 list-disc list-inside">
+                            <li class="list-item">	An RNA sequence <span class="font-bold">s</span> is a string of bases; <span class="font-bold">s</span> = b<sub>1</sub> b<sub>2</sub>…..b<sub>n</sub> where b<sub>i</sub> ∈ {A,U,C,G}  for 1 ≤ i ≤ n</li>
+                            <li class="list-item">  The optimal secondary structure predicted for <span class="font-bold">s</span> contains a set of base pairings B = { (i,j) } where
+                            1 ≤ i < j ≤ n and the pairings satisfy the following rules:
+                            </li>
+                            <ul class=" ml-12 list-disc">
+                                <li class="list-item"><span class="font-bold">[valid pairing]</span> (S[i],S[j]) must be either one of (A,U) or (U,A) or (C,G) or (G,C)</li>
+                                <li class="list-item"><span class="font-bold">[matching]</span> Each i can pair with at most one j.</li>
+                                <li class="list-item"><span class="font-bold">[at least 4 intervening bases in-between a pairing]</span> 4 < j-i < n </li>
+                                <li class="list-item"><span class="font-bold">[no crossing or no-knot]</span> 	For every (i,j)  and (k,l) ∈ B where i < k  we cannot have i < k < j < l </li>
+                            </ul>
+                            <li class="list-item">We have to find the maximum number of base pairings satisfying the above constraints for the given RNA sequence <span class="font-bold">s</span>.</li>
+                        </ul>
+                    </p>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="w-full">
+                <h2 class="m-4 text-3xl font-medium text-left">Dynamic Programming solution</h2>
+                <div class="gray-card">
+                    <span class="text-left font-bold">Recurrence relation:</span>
+                    <div class="flex flex-col items-center">
+                        <p class="text-justify">
+                            <p class="m-2">
+                                Let OPT(i,j) denote the maximum number of pairings possible between the indices i and j. This value will be the
+                                maximum of { OPT(i,j-1) (when s[i] does not pair with s[j]) and the maximum number of pairs obtained considering a base at index t (i ≤ t ≤ j-5) pairs with a base at index j (= 1 + OPT(i,t-1) + OPT(t+1,j)) }
+                                Also, because there must be atleast 4 intervening bases between a pairing OPT(i,j) = 0 whenever j-i < 5. 
+                            </p>
+                            <div class="w-fit rounded-md shadow-md border border-gray-400 overflow-hidden"><img src="./pic.jpg" class="object-contain"/></div>
+                            
+                            <p class="m-2"> We have to find the optimal secondary structure for the entire sequence, thus the maximum number of pairings is OPT(1,n) which can be obtained by solving the above recurrence. </p>
+                            <p class="m-2"> To obtain the matching pairs we recursively trace back the corresponding (i,j) for which the max value was obtained while calculating the OPT(i,j) for the subproblems.</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class=""></div>
+    </div>
+</body>
+</html>

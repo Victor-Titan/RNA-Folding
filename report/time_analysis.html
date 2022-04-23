@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./global.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 min-h-screen">
+    <div class="nav-bar flex items-center">
+        <span class="m-4 mr-auto text-2xl font-bold"> DAA Assignment 2</span>
+        <a class="mr-auto nav-item" href="./index.html"> Overview </a>
+        <a class="nav-item font-semibold" href="./time_analysis.html"> Time Analysis </a>
+        <a class="nav-item" href="./testcases.html"> Test Cases </a>
+        <a class="nav-item" href="./team.html"> Team Members </a>
+    </div>
+    <div class="grid grid-cols-home-sm sm:grid-cols-home-md md:grid-cols-home-lg">
+        <div class=""></div>
+
+        <div class="white-card flex flex-col items-start">
+            <h1 class="title self-center"> Time Analysis </h1>
+            <div class="gray-card">
+                <span class="text-left font-bold">Recurrence relation:</span>
+                <div class="flex flex-col items-center">
+                    <p class="text-justify">
+                        <p class="m-2">
+                            From the pseudocode, we can make out that it takes O(n^2) time to run it for one sequence, and it takes O(n) time to compute the recurrence for each iteration.
+                            Hence, the time complexity of this algorithm is O(n^3). From the graph below which was plotted for 1000 test cases, we can also make it out that the time complexity of the algorithm is O(n^3).
+                        </p>
+                        <div class=" w-96 rounded-md shadow-md border border-gray-400 overflow-hidden"><img src="./time_analysis.jpeg" class="object-contain"/></div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class=""></div>
+    </div>
+</body>
+</html>
